@@ -46,7 +46,7 @@ export const Route = createFileRoute("/results")({
 
 function Results() {
   const { q } = Route.useSearch();
-  const prompt = q ?? "A comfortable home to rent";
+  const prompt = q || "A comfortable home to rent";
   const [openId, setOpenId] = useState<string | null>(null);
 
   return (
