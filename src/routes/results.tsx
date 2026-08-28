@@ -18,11 +18,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { listings, aiSummary, type Listing } from "@/lib/mock-listings";
 
-type Search = { q?: string };
+type Search = { q: string };
 
 export const Route = createFileRoute("/results")({
   validateSearch: (search: Record<string, unknown>): Search => ({
-    q: typeof search.q === "string" ? search.q : undefined,
+    q: typeof search["q"] === "string" ? (search["q"] as string) : "",
   }),
   head: () => ({
     meta: [
