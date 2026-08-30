@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowUp, Home, Sparkles, Bell } from "lucide-react";
+import { ArrowUp, Home } from "lucide-react";
 import { examplePrompts } from "@/lib/mock-listings";
 
 export const Route = createFileRoute("/discover")({
