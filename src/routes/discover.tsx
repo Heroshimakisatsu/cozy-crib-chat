@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowUp, Home, Sparkles, Bell } from "lucide-react";
+import { ArrowUp, Home } from "lucide-react";
 import { examplePrompts } from "@/lib/mock-listings";
 
 export const Route = createFileRoute("/discover")({
@@ -35,29 +35,11 @@ function Discover() {
 
   return (
     <div className="phone-shell flex flex-col px-6 pb-10 pt-12">
-      <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4">
-        <div className="flex min-w-0 items-center gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary">
-            <Home className="h-5 w-5 text-primary-foreground" strokeWidth={1.8} />
-          </div>
-          <div className="min-w-0">
-            <p className="truncate text-sm font-semibold">Hi Thandi</p>
-            <p className="truncate text-xs text-muted-foreground">Johannesburg, Gauteng</p>
-          </div>
-        </div>
-        <button
-          aria-label="Notifications"
-          className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-card"
-        >
-          <Bell className="h-4.5 w-4.5 text-muted-foreground" />
-        </button>
-      </header>
-
       <div className="flex flex-1 flex-col justify-center py-10">
         <div className="text-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1 text-xs font-medium text-forest">
-            <Sparkles className="h-3.5 w-3.5" /> AI home finder
-          </span>
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-primary">
+            <Home className="h-6 w-6 text-primary-foreground" strokeWidth={1.8} />
+          </div>
           <h1 className="mt-4 text-[28px] leading-tight font-semibold">
             What kind of home
             <br />
